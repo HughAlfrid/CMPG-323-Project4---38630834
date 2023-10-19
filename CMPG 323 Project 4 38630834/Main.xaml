@@ -164,8 +164,12 @@
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Customer.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Customer.xaml">
           <ui:InvokeWorkflowFile.Arguments>
-            <InArgument x:TypeArguments="x:String" x:Key="toTest">[toTest]</InArgument>
-            <InArgument x:TypeArguments="x:String" x:Key="FilePath">[FilePath]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="toTest">
+              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="toTest" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="FilePath">
+              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="FilePath" />
+            </InArgument>
           </ui:InvokeWorkflowFile.Arguments>
         </ui:InvokeWorkflowFile>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Orders.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Orders.xaml">

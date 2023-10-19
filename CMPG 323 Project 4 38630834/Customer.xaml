@@ -125,7 +125,6 @@
   <Sequence DisplayName="Customer" sap:VirtualizedContainerService.HintSize="844,5542" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="CustomerData" />
-      <Variable x:TypeArguments="x:String" Default="[&quot;F&quot;+i.ToString]" Name="K" />
       <Variable x:TypeArguments="x:Int32" Name="i" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -133,7 +132,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[CustomerData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="782,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="[toTest]" WorkbookPath="[FilePath]" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[CustomerData]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="782,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Customers" WorkbookPath="[FilePath]" />
     <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Home Page - EcoPower_Logistics" sap:VirtualizedContainerService.HintSize="782,5303" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="f9b90940-352d-46f8-93c0-f9e8b478fd85" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
@@ -352,7 +351,7 @@
                                         <uix:TargetAnchorable BrowserURL="https://cmpg323-ecopowerlogistics.azurewebsites.net/Customers/Delete/123662817" DesignTimeRectangle="320, 507, 70, 38" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Delete'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn btn-danger' aaname='Delete' check:text='Delete' /&gt;" Guid="a6b8173c-14cf-4f91-a16a-f387cbdac764" InformativeScreenshot="d60f4778f8bc229d75faa9d3bd6c1722.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Delete - EcoPower_Logistics' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                                       </uix:NClick.Target>
                                     </uix:NClick>
-                                    <ui:WriteCell Cell="[K]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Customers" Text="True" WorkbookPath="CMPG323 EcoPower Logistics Data.xlsx" />
+                                    <ui:WriteCell Cell="[&quot;F&quot;+i.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Customers" Text="True" WorkbookPath="CMPG323 EcoPower Logistics Data.xlsx" />
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
@@ -375,7 +374,7 @@
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:WriteCell Cell="[K]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Customers" Text="False" WorkbookPath="CMPG323 EcoPower Logistics Data.xlsx" />
+                            <ui:WriteCell Cell="[&quot;F&quot;+i.ToString]" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Customers" Text="False" WorkbookPath="CMPG323 EcoPower Logistics Data.xlsx" />
                           </Sequence>
                         </If.Else>
                       </If>
